@@ -267,10 +267,11 @@ console.log('Task 4:', get20s(artists));
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(array, number){
+   array.splice(number, 1);
+   return array.length;
 }
-   
+console.log('Task 5:', removeArtist(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -301,10 +302,18 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const artistsHundred = [];
+  for(let i = 0; i < array.length; i++) {
+    const artist = array[i];
+    const numPaintings = Number(artist['paintings']);
+    if (numPaintings > 100) {
+      artistsHundred.push(artist['name']);
+    }  
+  }
+  return artistsHundred;
 }
-
+console.log('Task 7:', lotsOfArt(artists));
 
 
 
