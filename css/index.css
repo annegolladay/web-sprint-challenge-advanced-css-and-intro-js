@@ -134,3 +134,44 @@ button:hover{
 .artist img{
     width:100%;
 }
+
+/* Media Queries */
+
+/* Mobile */
+@media(max-width: 500px) {
+    nav span {
+        border-left: 2px solid #626262;
+    }
+    a {
+        font-size: 1.5rem;
+        padding: 0 4%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .title-container div {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        width: 100%;
+    }
+    .title-container hr {
+        width: 100%;
+    }
+    .artists-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .artist {
+        width: 80%;
+    }
+    .artist img {
+        width: 80%;
+        height: 40vh;
+    }
+    .artist .bio {
+        width: 90%;
+        font-size: 60%;
+    }
+}
